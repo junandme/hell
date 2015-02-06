@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>join</title>
+	<title>회원가입!</title>
 </head>
 <body>
 	<form action="join_check.php" method="post">
