@@ -6,7 +6,7 @@
 </head>
 <body>
 	<?php
-		$servername = "localhost";
+		$servername = "54.64.212.73";
 		$username = "root";
 		$password = "quf254";
 		$dbname = "test";
