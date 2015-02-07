@@ -23,7 +23,7 @@
 
 
 
-		$sql = "INSERT INTO user (id, password,pone,sex,eamil,name)
+		$sql = "INSERT INTO user (id, password,pone,sex,email,name)
 
 		VALUES ('$new_id', '$new_pw','$new_pone','$Radios','new_email' ,'$new_name')";
 
