@@ -20,11 +20,16 @@
 
 		extract($_POST);
 
-		$sql = "INSERT INTO user (id, password, name)
-		VALUES ('$new_id', '$new_pw','$new_name')";
+
+
+
+		$sql = "INSERT INTO user (id, password,pone,sex,email,name)
+
+		VALUES ('$new_id', '$new_pw','$new_pone','$Radios','new_email' ,'$new_name')";
 
 		if ($conn->query($sql) === TRUE) {
-    			echo "New record created successfully";
+			echo "<meta http-equiv='refresh' content='0;url=../../index.html'>";
+    			echo "<script>    alert('$new_name'+'님 정상적으로 회원가입 되었습니다.'); </script>";
 		} else {
     			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
