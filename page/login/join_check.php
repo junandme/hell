@@ -22,11 +22,9 @@
 
 
 
-<<<<<<< HEAD
-		$sql = "INSERT INTO user (id, password, pone,sex,eamil,name)
-=======
+
 		$sql = "INSERT INTO user (id, password,pone,sex,eamil,name)
->>>>>>> branch 'master' of https://github.com/junandme/hell.git
+
 		VALUES ('$new_id', '$new_pw','$new_pone','$Radios','new_email' ,'$new_name')";
 
 		if ($conn->query($sql) === TRUE) {
