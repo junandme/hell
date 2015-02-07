@@ -40,7 +40,7 @@
 			
 			$_SESSION['login_user']=$row[name];
 
-			echo "<meta http-equiv='refresh' content='0;url=../../main.html'>";
+			echo "<meta http-equiv='refresh' content='0;url=../main/main.html'>";
 		}
 		else{
 			
