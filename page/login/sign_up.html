@@ -27,41 +27,42 @@
   </head>
   <body>
   	<div class="container">
-  		<form class="form-horizontal">
+  		
   			<fieldset>
 
   				<div class="col-lg-6 col-lg-offset-3">
   					<legend>Sign Up</legend>
   				</div>
+          <form action="./join_check.php" method="post">
   				<div class="form-group">
   					<div class="col-lg-6 col-lg-offset-3">
-  						<input type="text" class="form-control" id="inputEmail" placeholder="Id">
+  						<input type="text" class="form-control"  placeholder="Id" name='new_id'>
   					</div>
   				</div>
   				<div class="form-group">
   					<div class="col-lg-6 col-lg-offset-3">
-  						<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+  						<input type="password" class="form-control"  placeholder="Password" name='new_pw'>
   					</div>
   				</div>
   				<div class="form-group">
   					<div class="col-lg-6 col-lg-offset-3">
-  						<input type="password" class="form-control" id="inputPassword" placeholder="Password Check">
+  						<input type="password" class="form-control"  placeholder="Password Check" name='new_pw_check'>
   					</div>
   				</div>
   				<div class="form-group">
   					<div class="col-lg-6 col-lg-offset-3">
-  						<input type="text" class="form-control" id="input" placeholder="Phone Number">
+  						<input type="text" class="form-control"  placeholder="Phone Number" name='new_pone'>
   					</div>
   				</div> 			
   				<div class="form-group">
   					<div class="col-lg-6 col-lg-offset-3">
   						<div class="radio">
   							<label>
-  								<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+  								<input type="radio" name="Radios"  value="male" checked="" >
   								male
   							</label>
   							<label>
-  								<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+  								<input type="radio" name="Radios"  value="female" >
   								female
   							</label>
   						</div>
@@ -69,19 +70,20 @@
   				</div>
   				<div class="form-group">
   					<div class="col-lg-6 col-lg-offset-3">
-  						<input type="text" class="form-control" id="inputEmail" placeholder="Email">
+  						<input type="text" class="form-control"  placeholder="Email" naem='new_email'>
   					</div>
   				</div>
   				<div class="form-group">
   					<div class="col-lg-6 col-lg-offset-3">
-  						<input type="text" class="form-control" id="inputEmail" placeholder="Name">
+  						<input type="text" class="form-control"  placeholder="Name" name='new_name'>
   					</div>
   				</div>
   				<div class="form-group">
   					<div class="col-lg-6 col-lg-offset-5">
   						<a href="../../index.html" class="btn btn-default">Cancel</a>
   						<!-- <button class="btn btn-default">Cancel</button> -->
-  						<button type="submit" class="btn btn-primary">Submit</button>
+  						<input type="submit" class="btn btn-primary" value='Submit'/>
+              
   					</div>
   				</div>
   			</fieldset>

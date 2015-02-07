@@ -20,8 +20,10 @@
 
 		extract($_POST);
 
-		$sql = "INSERT INTO user (id, password, name)
-		VALUES ('$new_id', '$new_pw','$new_name')";
+
+
+		$sql = "INSERT INTO user (id, password, pone,sex,eamil,name)
+		VALUES ('$new_id', '$new_pw','$new_pone','$Radios','new_email' ,'$new_name')";
 
 		if ($conn->query($sql) === TRUE) {
     			echo "New record created successfully";
