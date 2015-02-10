@@ -25,7 +25,7 @@
 
 		$sql = "INSERT INTO user (id, password,pone,sex,email,name)
 
-		VALUES ('$new_id', '$new_pw','$new_pone','$Radios','new_email' ,'$new_name')";
+		VALUES ('$new_id', '$new_pw','$new_pone','$Radios','$new_email' ,'$new_name')";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "<meta http-equiv='refresh' content='0;url=../../index.html'>";
