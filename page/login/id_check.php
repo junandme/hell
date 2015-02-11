@@ -45,7 +45,7 @@
 				</div>';
 				#echo "$new_id 는 사용가능합니다.";
 			}
-			echo '<br><br><input  class="btn btn-defualt" type="button" name="button" value="close" onclick="self.close();">';
+			echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="self.close();">';
 
 			$conn->close();
 			?>
