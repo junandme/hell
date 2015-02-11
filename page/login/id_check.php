@@ -5,6 +5,25 @@
 	<title>ID check</title>
 	<link rel="stylesheet" href="../../assets/css/bootswatch.min.css">
 	<link rel="stylesheet" href="../../css/bootstrap.css" media="screen">
+
+	<script>
+	
+
+	function send_null(){
+
+
+		window.opener.document.getElementById('p_id').value='';
+		window.opener.document.getElementById('p_id').focus();
+		window.opener.document.getElementById('sub').disabled=true;
+		self.close();
+	}
+
+	function send_ok(){
+		window.opener.document.getElementById('sub').disabled=false;
+		self.close();
+	}
+
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -37,6 +56,8 @@
 				<p>'.$new_id.' 는 이미존재하는 아이디 입니다.</p>
 				</div>';
 				#echo "$new_id 는 이미존재하는 아이디 입니다.";
+				echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="send_null();">';
+				
 			}
 			else{
 				echo '<div class="alert alert-dismissable alert-success">
@@ -44,11 +65,16 @@
 				<p>'.$new_id.' 는 사용가능한 아이디 입니다.</p>
 				</div>';
 				#echo "$new_id 는 사용가능합니다.";
+				echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="send_ok();">';
+				
 			}
-			echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="self.close();">';
+			
 
 			$conn->close();
 			?>
+
+
+
 		</div>
 	</div>
 	
