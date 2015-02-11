@@ -42,13 +42,21 @@ function chk_input() {
       user_form.new_email.focus();
     return false;
   }
-  else if(user_form.new_id.value!=""){
-      window.open('id_check.php?new_id='+user_form.new_id.value,'IDwin','width=400,height=200');
-      return false;
-    }
   else
   {
     return true;
+  }
+}
+
+function chk_id()
+{
+  if(user_form.new_id.value==''){
+    alert('Input ID');
+    user_form.new_id.focus();
+  } 
+  else{
+    window.open('id_check.php?new_id='+user_form.new_id.value,'IDwin','width=400,height=200');
+    
   }
 }
 
@@ -64,6 +72,8 @@ function chk_pw(){
   }
 }
 
+
+
 </script>
 </head>
 <body>
@@ -71,14 +81,20 @@ function chk_pw(){
 
     <fieldset>
 
+
+
       <div class="col-lg-6 col-lg-offset-3">
         <legend>Sign Up</legend>
       </div>
-      <form name="user_form" action="./join_check.php"  method="post" onsubmit="return chk_input()">
+      <form name="user_form" action="./join_check.php"   method="post" onsubmit="return chk_input()">
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
-            <input type="text" class="form-control" placeholder="ID" name='new_id'  autofocus maxlength="15">
+            <input type="text" class="form-control" placeholder="ID" id="p_id" name='new_id'   autofocus maxlength="15" >
           </div>
+          <div class="col-lg-1">
+            
+             <input type="button" class="btn btn-primary" value='ID Check' onclick="chk_id();"/>
+        </div>
         </div>
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
