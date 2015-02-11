@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="col-lg-6 col-lg-offset-3" style="margin-top:25%; text-align:center;">
+		<div class="col-lg-6 col-lg-offset-3" style="text-align:center;">
 			<?php
 			$new_id=$_GET['new_id'];
 			$servername = "localhost";
