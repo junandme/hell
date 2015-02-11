@@ -27,7 +27,18 @@ _gaq.push(['_trackPageview']);
 function chk_input() {
   if(user_form.new_id.value==""||user_form.new_pw.value==""||user_form.new_pw_check.value==""||user_form.new_name.value==""||user_form.new_pone.value==""||user_form.new_email.value==""){
     alert("Not Full Data");
-    user_form.new_id.focus();
+    if(user_form.new_id.value=="")
+      user_form.new_id.focus();
+    else if(user_form.new_pw.value=="")
+      user_form.new_pw.focus();
+    else if(user_form.new_pw_check.value=="")
+      user_form.new_pw_check.focus();
+    else if(user_form.new_name.value=="")
+      user_form.new_name.focus();
+    else if(user_form.new_pone.value=="")
+      user_form.new_pone.focus();
+    else if(user_form.new_email.value=="")
+      user_form.new_email.focus();
     return false;
   }
   else
@@ -72,7 +83,7 @@ function chk_pw(){
       </div>
       <form name="user_form" action="./join_check.php"  method="post" onsubmit="return chk_input()">
         <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-3">
+          <div class="col-lg-6 col-lg-offset-3">z
             <input type="text" class="form-control" placeholder="ID" name='new_id' onblur="chk_id();" autofocus>
           </div>
         </div>
