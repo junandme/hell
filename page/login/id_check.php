@@ -9,6 +9,7 @@
 	<script>
 	
 
+<<<<<<< HEAD
 	function send_null(){
 
 
@@ -21,6 +22,16 @@
 	function send_ok(){
 		window.opener.document.getElementById('sub').disabled=false;
 		self.close();
+=======
+	function send(){
+
+
+		window.opener.document.getElementById('p_id').value='';
+		window.opener.document.getElementById('p_id').focus();
+		self.close();
+		
+		
+>>>>>>> branch 'master' of https://github.com/junandme/hell.git
 	}
 
 	</script>
@@ -56,7 +67,11 @@
 				<p>'.$new_id.' 는 이미존재하는 아이디 입니다.</p>
 				</div>';
 				#echo "$new_id 는 이미존재하는 아이디 입니다.";
+<<<<<<< HEAD
 				echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="send_null();">';
+=======
+				echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="send();">';
+>>>>>>> branch 'master' of https://github.com/junandme/hell.git
 				
 			}
 			else{
@@ -65,7 +80,11 @@
 				<p>'.$new_id.' 는 사용가능한 아이디 입니다.</p>
 				</div>';
 				#echo "$new_id 는 사용가능합니다.";
+<<<<<<< HEAD
 				echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="send_ok();">';
+=======
+				echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="self.close();">';
+>>>>>>> branch 'master' of https://github.com/junandme/hell.git
 				
 			}
 			
