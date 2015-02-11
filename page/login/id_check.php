@@ -9,6 +9,7 @@
 	<script>
 	
 
+
 	function send_null(){
 
 
@@ -22,6 +23,7 @@
 		window.opener.document.getElementById('sub').disabled=false;
 		self.close();
 	}
+
 
 	</script>
 </head>
@@ -56,7 +58,9 @@
 				<p>'.$new_id.' 는 이미존재하는 아이디 입니다.</p>
 				</div>';
 				#echo "$new_id 는 이미존재하는 아이디 입니다.";
+
 				echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="send_null();">';
+
 				
 			}
 			else{
@@ -65,7 +69,9 @@
 				<p>'.$new_id.' 는 사용가능한 아이디 입니다.</p>
 				</div>';
 				#echo "$new_id 는 사용가능합니다.";
+
 				echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="send_ok();">';
+
 				
 			}
 			
