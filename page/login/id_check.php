@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="col-lg-6 col-lg-offset-3" style="margin-top:25%; text-align:center;">
+		<div class="col-lg-6 col-lg-offset-3" style="text-align:center;">
 			<?php
 			$new_id=$_GET['new_id'];
 			$servername = "localhost";
@@ -45,7 +45,7 @@
 				</div>';
 				#echo "$new_id 는 사용가능합니다.";
 			}
-			echo '<br><br><input  class="btn btn-defualt" type="button" name="button" value="close" onclick="self.close();">';
+			echo '<input  class="btn btn-defualt" type="button" name="button" value="close" onclick="self.close();">';
 
 			$conn->close();
 			?>
