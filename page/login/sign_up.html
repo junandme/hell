@@ -28,18 +28,17 @@ function chk_input() {
   if(user_form.new_id.value==""||user_form.new_pw.value==""||user_form.new_pw_check.value==""||user_form.new_name.value==""||user_form.new_pone.value==""||user_form.new_email.value==""){
     alert("Not Full Data");
     if(user_form.new_id.value=="")
-      user_form.new_id.focus();
-    
+      user_form.new_id.focus();    
     else if(user_form.new_pw.value=="")
       user_form.new_pw.focus();
     else if(user_form.new_pw_check.value=="")
       user_form.new_pw_check.focus();
-    else if(user_form.new_name.value=="")
-      user_form.new_name.focus();
     else if(user_form.new_pone.value=="")
       user_form.new_pone.focus();
     else if(user_form.new_email.value=="")
       user_form.new_email.focus();
+    else if(user_form.new_name.value=="")
+      user_form.new_name.focus();
     return false;
   }
   else if(user_form.new_id.value!=""){
