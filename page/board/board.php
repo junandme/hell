@@ -143,6 +143,7 @@ _gaq.push(['_trackPageview']);
         </tr>
       </tbody>
     </table> 
+    <a href="#" align="right" class="btn btn-default">Write</a>
 
     <!-- 저작권표시바닥글 -->
     <footer>
