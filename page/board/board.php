@@ -106,7 +106,6 @@
         <a href="write.php" class="btn btn-default">글쓰기</a>
       </div>
     </div>
-
     <!-- 저작권표시바닥글 -->
     <? include "../import/footer.php"; ?>
   </div>
