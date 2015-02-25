@@ -16,7 +16,7 @@
             <li><a href="/page/info/info_de.html">Default</a></li>
             <li class="divider"></li>
             <li><a href="/page/info/info_jun.html">Jun</a></li>
-            <li><a href="#">Jong</a></li>
+            <li><a href="/page/info/info_jong.html">Jong</a></li>
           </ul>
         </li>
         <li>
