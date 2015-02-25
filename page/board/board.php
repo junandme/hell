@@ -4,71 +4,11 @@
   <meta charset="utf-8">
   <title>Board</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../css/bootstrap.css" media="screen">
-  <link rel="stylesheet" href="../../assets/css/bootswatch.min.css">
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-<script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
-<script src="../bower_components/respond/dest/respond.min.js"></script>
-<![endif]-->
-<script>
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-23019901-1']);
-_gaq.push(['_setDomainName', "bootswatch.com"]);
-_gaq.push(['_setAllowLinker', true]);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
+  <? include "../import/head.php"; ?>
 </head>
 <body>
   <!-- 네비게이션바 -->
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a href="../main/main.html" class="navbar-brand">We are student</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Info <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="themes">
-              <li><a href="../info/info_de.html">Default</a></li>
-              <li class="divider"></li>
-              <li><a href="../info/info_jun.html">Jun</a></li>
-              <li><a href="#">Jong</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="board.php">Board</a>
-          </li>
-          <li>
-            <a href="#">Recommendations</a>
-          </li>
-          <li>
-            <a href="#">???</a>
-          </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="../../index.html">Logout</a></li>
-          <li><a href="#" target="_self">My page</a></li>
-        </ul>
-
-      </div>
-    </div>
-  </div>
+  <? include "../import/nav.php"; ?>
 
   <!-- 컨텐츠 -->
   <div class="container">
@@ -78,6 +18,14 @@ _gaq.push(['_trackPageview']);
     </div>
     
     <table class="table table-striped table-hover ">
+      <div class="col-lg-4 pull-right">
+        <div class="col-lg-9">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <div class="col-lg-3">
+          <a href="write.php" class="btn btn-default">검색</a>
+        </div>
+      </div>
       <thead>
         <tr>
           <th width="10%">글번호</th>
@@ -142,24 +90,25 @@ _gaq.push(['_trackPageview']);
           <td>2015-02-22 10:20</td>
         </tr>
       </tbody>
-    </table> 
+    </table>
+    <!-- 페이지번호 -->
+    <div align="center">
+      <ul class="pagination">
+        <li class="disabled"><a href="#">«</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+      <div class="pull-right">
+        <a href="write.php" class="btn btn-default">글쓰기</a>
+      </div>
+    </div>
 
     <!-- 저작권표시바닥글 -->
-    <footer>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="list-unstyled">
-            <li class="pull-right"><a href="#top">Back to top</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100001477704398" target="_blank">Facebook</a></li>
-            <li><a href="https://github.com/junandme/hell" target="_blank">GitHub</a></li>
-          </ul>
-          <p>Made by JunHyuk-Park and JongSun-Jeong. Contact him at <a href="mailto:junhyuk00@gmail.com">junhyuk00@gmail.com</a> and <a href="mailto:whdrjs0@gmail.com">whdrjs0@gmail.com</a>.</p>
-          <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
-          <p>Based on <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" target="_blank">Google</a>.</p>
-
-        </div>
-      </div>
-    </footer>
+    <? include "../import/footer.php"; ?>
   </div>
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
