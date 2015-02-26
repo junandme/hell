@@ -40,11 +40,11 @@
 			
 			$_SESSION['login_user']=$row[name];
 
-			echo "<meta http-equiv='refresh' content='0;url=../main/main.html'>";
+			echo "<meta http-equiv='refresh' content='0;url=../main/main.php'>";
 		}
 		else{
 			
-			echo "<meta http-equiv='refresh' content='0;url=../../index.html'>";
+			echo "<meta http-equiv='refresh' content='0;url=../../index.php'>";
 			echo "<script>    alert('id 또는 password가 틀렸습니다.'); </script>";
 		}
 		

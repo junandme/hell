@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Info_default</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <? include "../import/head.php"; ?>
+  <?php include "../import/head.php"; ?>
 </head>
 <body>
   <!-- 네비게이션바 -->

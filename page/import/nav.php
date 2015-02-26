@@ -1,7 +1,7 @@
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a href="/page/main/main.html" class="navbar-brand">We are student</a>
+      <a href="/page/main/main.php" class="navbar-brand">We are student</a>
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -13,10 +13,10 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Info <span class="caret"></span></a>
           <ul class="dropdown-menu" aria-labelledby="themes">
-            <li><a href="/page/info/info_de.html">Default</a></li>
+            <li><a href="/page/info/info_de.php">Default</a></li>
             <li class="divider"></li>
-            <li><a href="/page/info/info_jun.html">Jun</a></li>
-            <li><a href="/page/info/info_jong.html">Jong</a></li>
+            <li><a href="/page/info/info_jun.php">Jun</a></li>
+            <li><a href="/page/info/info_jong.php">Jong</a></li>
           </ul>
         </li>
         <li>
@@ -31,7 +31,7 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/index.html">Logout</a></li>
+        <li><a href="/index.php">Logout</a></li>
         <li><a href="#" target="_self">My page</a></li>
       </ul>
 
