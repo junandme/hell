@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<!-- 저작권표시바닥글 -->
-    <?php include "../import/footer.php"; ?>
+    <?php include "page/import/footer.php"; ?>
 	</div>
 	
 
