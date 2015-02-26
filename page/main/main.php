@@ -21,60 +21,70 @@
     </div>
 
     <!-- 공지사항테이블 -->
-    <table class="table table-striped table-hover ">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Notice</th>
-          <th>Board</th>
-          <th>Gallery</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="info">
-          <td>3</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="success">
-          <td>4</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="danger">
-          <td>5</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="warning">
-          <td>6</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <!-- <tr class="active">
-          <td>7</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr> -->
-      </tbody>
-    </table> 
+    <div class="col-lg-6">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Notice</th>
+            <th>Board</th>
+            <th>Gallery</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="info">
+            <td>3</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="success">
+            <td>4</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="danger">
+            <td>5</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="warning">
+            <td>6</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+          <tr class="active">
+            <td>7</td>
+            <td>Column content</td>
+            <td>Column content</td>
+            <td>Column content</td>
+          </tr>
+        </tbody>
+      </table> 
+    </div>
+    <div class="col-lg-3 col-lg-offset-3">
+      <div>
+        <img src="/img/twitter.png" alt="twitter">
+      </div>
+      <div>
+        <img src="/img/facebook.png" alt="facebook">
+      </div>
+    </div>
 
     <!-- 저작권표시바닥글 -->
     <?php include "../import/footer.php"; ?>
