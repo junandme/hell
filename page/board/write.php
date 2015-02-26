@@ -44,6 +44,8 @@
         
       </fieldset>
     </form>
+    <!-- 저작권표시바닥글 -->
+    <?php include "../import/footer.php"; ?>
   </div>
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

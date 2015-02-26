@@ -22,7 +22,7 @@
       <img src="../../img/jong.jpg" alt="resume">
     </div>
     <!-- 저작권표시바닥글 -->
-    <? include "../import/footer.php"; ?>
+    <?php include "../import/footer.php"; ?>
   </div>
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

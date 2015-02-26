@@ -29,6 +29,8 @@
 			  <a onclick="alert('죄송합니다. 아이디,비밀번호 찾기는 whdrjs0@gmail.com 으로 문의해 주세요.');" class="btn btn-default">Pw miss</a>
 			</div>
 		</div>
+		<!-- 저작권표시바닥글 -->
+    <?php include "../import/footer.php"; ?>
 	</div>
 	
 
