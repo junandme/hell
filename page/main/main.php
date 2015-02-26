@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <title>Main</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <? include "../import/head.php"; ?>
+  <?php include "../import/head.php"; ?>
 </head>
 <body>
   <!-- 네비게이션바 -->
-  <? include "../import/nav.php"; ?>
+  <?php include "../import/nav.php"; ?>
 
   <!-- 컨텐츠 -->
   <div class="container">
