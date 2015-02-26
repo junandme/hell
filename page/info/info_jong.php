@@ -8,7 +8,7 @@
 </head>
 <body>
   <!-- 네비게이션바 -->
-  <? include "../import/nav.php"; ?>
+  <?php include "../import/nav.php"; ?>
 
   <!-- 컨텐츠 -->
   <div class="container">
