@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Sign Up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <? include "../import/head.php"; ?>
+  <?php include "../import/head.php"; ?>
 <script>
 function chk_input() {
   if(user_form.new_id.value==""||user_form.new_pw.value==""||user_form.new_pw_check.value==""||user_form.new_name.value==""||user_form.new_pone.value==""||user_form.new_email.value==""){
