@@ -77,12 +77,18 @@
         </tbody>
       </table> 
     </div>
-    <div class="col-lg-3 col-lg-offset-3">
+    <div class="col-lg-3 col-lg-offset-3 well" align="center">
       <div>
-        <img src="/img/twitter.png" alt="twitter">
+        <a href="https://www.google.co.kr/" target="_brank"><img src="/img/google.png" alt="google"></a><br></br>
       </div>
       <div>
-        <img src="/img/facebook.png" alt="facebook">
+        <a href="http://www.naver.com/" target="_brank"><img src="/img/naver.png" alt="naver"></a><br></br>
+      </div>
+      <div>
+        <a href="https://twitter.com/" target="_brank"><img src="/img/twitter.png" alt="twitter"></a><br></br>
+      </div>
+      <div>
+        <a href="https://www.facebook.com/" target="_brank"><img src="/img/facebook.png" alt="facebook"></a>
       </div>
     </div>
 
