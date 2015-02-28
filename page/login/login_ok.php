@@ -7,6 +7,8 @@
 <body>
 	<?php
 
+		
+
 		$servername = "localhost";
 		$username = "root";
 		$password = "quf254";
@@ -26,7 +28,7 @@
 
 
 
-		$sql = "SELECT id and name from user where id='$login_id' and password='$login_pw' ";
+		$sql = "SELECT id,name from user where id='$login_id' and password='$login_pw' ";
  
 		$result = mysqli_query($conn,$sql);
  
@@ -38,7 +40,8 @@
 
 		if($count===1){
 			
-			$_SESSION['login_user']=$row[name];
+			$_SESSION['login_user']=$row["name"];
+			$_SESSION['login_id']=$row["id"];
 
 			echo "<meta http-equiv='refresh' content='0;url=../main/main.php'>";
 		}

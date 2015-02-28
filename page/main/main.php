@@ -7,6 +7,11 @@
   <?php include "../import/head.php"; ?>
 </head>
 <body>
+	<?php 
+		session_start();
+
+		echo "<p> 환영합니다.". $_SESSION['login_user']."님</p>";
+	?>
   <!-- 네비게이션바 -->
   <?php include "../import/nav.php"; ?>
 
