@@ -32,7 +32,7 @@
 		<div class="col-lg-6 col-lg-offset-3" style="text-align:center;">
 			<?php
 			$new_id=$_GET['new_id'];
-			$servername = "localhost";
+			$servername = "172.31.10.253";
 			$username = "root";
 			$password = "quf254";
 			$dbname = "test";

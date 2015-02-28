@@ -9,7 +9,7 @@
 
 		
 
-		$servername = "localhost";
+		$servername = "172.31.10.253";
 		$username = "root";
 		$password = "quf254";
 		$dbname = "test";
