@@ -1,3 +1,6 @@
+<?php
+
+echo'
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -31,10 +34,20 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/index.php">Logout</a></li>
+        <li><a href="/index.php" onclick="log_out();">Logout</a></li>
         <li><a href="#" target="_self">My page</a></li>
       </ul>
 
     </div>
   </div>
-</div>
+</div>';
+
+?>
+
+<script type="text/javascript">
+  function log_out () {
+    <?php
+    session_destroy();
+    ?>
+  }
+</script>

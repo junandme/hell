@@ -1,4 +1,19 @@
 <?php
+session_start();
+
+$servername = "54.64.212.73";
+$username = "root";
+$password = "quf254";
+$dbname = "test";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+
 echo'
 <link rel="stylesheet" href="/css/bootstrap.css" media="screen">
 <link rel="stylesheet" href="/assets/css/bootswatch.min.css">
@@ -21,4 +36,5 @@ _gaq.push(["_trackPageview"]);
 	var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
 })();
 </script>';
+
 ?>

@@ -1,3 +1,6 @@
+<?php
+
+echo'
 <footer>
   <div class="row">
     <div class="col-lg-12">
@@ -12,4 +15,8 @@
 
     </div>
   </div>
-</footer>
+</footer>';
+
+$conn->close();
+
+?>

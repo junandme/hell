@@ -34,7 +34,7 @@
           <th width="15%">날짜</th>
         </tr>
       </thead>
-      <tbody>
+      <!-- <tbody>
         <tr class="info">
           <td><span class="label label-danger">Notice</span></td>
           <td>공지사항</td>
@@ -89,7 +89,8 @@
           <td>정종선</td>
           <td>2015-02-22 10:20</td>
         </tr>
-      </tbody>
+      </tbody> -->
+
     </table>
     <!-- 페이지번호 -->
     <div align="center">

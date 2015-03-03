@@ -7,23 +7,17 @@
 	<link rel="stylesheet" href="../../css/bootstrap.css" media="screen">
 
 	<script>
-	
-
 
 	function send_null(){
-
-
 		window.opener.document.getElementById('p_id').value='';
 		window.opener.document.getElementById('p_id').focus();
 		window.opener.document.getElementById('sub').disabled=true;
 		self.close();
 	}
-
 	function send_ok(){
 		window.opener.document.getElementById('sub').disabled=false;
 		self.close();
 	}
-
 
 	</script>
 </head>

@@ -6,17 +6,12 @@
 </head>
 <body>
 	<?php
-
-		
-
 		$servername = "54.64.212.73";
 		$username = "root";
 		$password = "quf254";
 		$dbname = "test";
 
 		session_start();
-		
-
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		// Check connection
@@ -26,8 +21,6 @@
 
 		extract($_POST);
 
-
-
 		$sql = "SELECT id,name from user where id='$login_id' and password='$login_pw' ";
  
 		$result = mysqli_query($conn,$sql);
@@ -35,8 +28,6 @@
 		$row = mysqli_fetch_assoc($result);
 	
 		$count=mysqli_num_rows($result);
-
-
 
 		if($count===1){
 			
@@ -51,13 +42,7 @@
 			echo "<script>    alert('id 또는 password가 틀렸습니다.'); </script>";
 		}
 		
-		
-
 		$conn->close();
-
-
-
 	?>
-	
 </body>
 </html>
