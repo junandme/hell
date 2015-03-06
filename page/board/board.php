@@ -16,7 +16,7 @@
     <div class="jumbotron">
       <h1>This page is board~</h1>
     </div>
-    
+
     <table class="table table-striped table-hover ">
       <div class="col-lg-4 pull-right">
         <div class="col-lg-9">
@@ -28,10 +28,10 @@
       </div>
       <thead>
         <tr>
-          <th width="10%">글번호</th>
-          <th width="60%">글제목</th>
-          <th width="15%">글쓴이</th>
-          <th width="15%">날짜</th>
+          <th width="7%">글번호</th>
+          <th>글제목</th>
+          <th width="11%">작성자</th>
+          <th class="timeDate" width="15%">등록시간</th>
         </tr>
       </thead>
       <!-- <tbody>
@@ -90,9 +90,72 @@
           <td>2015-02-22 10:20</td>
         </tr>
       </tbody> -->
+      <tbody>
+        <?php
+        $sql = "SELECT * FROM board";
+        $result = mysqli_query($conn,$sql);
+        $rows = mysqli_num_rows($result);
+        $total_record = $rows;
+        
+        $record_per_page = 20;
 
+        if( isset($page) ) {
+          $now_page = $page;
+        } else {
+          $now_page = 1;
+        }
+        ?>
+
+        <?php if($total_record==0) :?>글이 존재하지 않습니다.<?php else:?><?php endif?>
+
+        <?php
+        $start_record = $record_per_page*($now_page-1);
+        $record_to_get = $record_per_page;
+        if( $start_record+$record_to_get > $total_record) {
+          $record_to_get = $total_record - $start_record;
+        }
+        $sql = "SELECT * from board,user WHERE writer=id and 1 ORDER BY num DESC LIMIT $start_record, $record_to_get";
+        $result = mysqli_query($conn,$sql);
+        ?>
+        
+        <?php while($data = $result->fetch_array()):?>
+
+        <?php
+        // $nDate = date("Y-m-d");
+        // $aDate = date_format($data['date'], "Y-m-d");
+        // $nCut = explode("-", $nDate);
+        // $aCut = explode("-", $aDate);
+        // $nAdd = "$nCut[0]"."$nCut[1]"."$nCut[2]";
+        // $aAdd = "$aCut[0]"."$aCut[1]"."$aCut[2]";
+
+        // if($nAdd == $aAdd) {
+        //   $getDate = date_format($data['date'], "A H:i:s");
+        // } else {
+        //   $getDate = date_format($data['date'], "y-m-d");
+        // }
+
+        ?>
+        <?php if($data[notice]) :?>
+        <tr class="info">
+          <td align="center"> <span class="label label-danger">Notice</span></td>
+          <td> <?php echo $data['title'] ?></td>
+          <td> <?php echo $data['name'] ?></td>
+          <td> <?php echo $data['date'] ?></td>
+        </tr>
+        <?php else:?>
+        <tr>
+          <td align="center"> <?php echo $data['num'] ?></td>
+          <td> <?php echo $data['title'] ?></td>
+          <td> <?php echo $data['name'] ?></td>
+          <td> <?php echo $data['date'] ?></td>
+        </tr>
+        <?php endif?>
+        <?php endwhile ?>
+        
+
+      </tbody>
     </table>
-    <!-- 페이지번호 -->
+  <!-- 페이지번호 -->
     <div align="center">
       <ul class="pagination">
         <li class="disabled"><a href="#">«</a></li>
@@ -114,5 +177,5 @@
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../../assets/js/bootswatch.js"></script>
-</body>
+  </body>
 </html>
