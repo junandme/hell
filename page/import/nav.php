@@ -34,7 +34,7 @@ echo'
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/index.php" onclick="log_out();">Logout</a></li>
+        <li><a href="/page/login/log_out.php">Logout</a></li>
         <li><a href="#" target="_self">My page</a></li>
       </ul>
 
@@ -43,11 +43,3 @@ echo'
 </div>';
 
 ?>
-
-<script type="text/javascript">
-  function log_out () {
-    <?php
-    session_destroy();
-    ?>
-  }
-</script>
