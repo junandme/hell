@@ -35,7 +35,7 @@ echo'
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/page/login/log_out.php">Logout</a></li>
-        <li><a href="#" target="_self">My page</a></li>
+        <li><a href="/page/login/update.php" target="_self">My page</a></li>
       </ul>
 
     </div>
