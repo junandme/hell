@@ -25,7 +25,7 @@
             <textarea class="form-control" rows="15" placeholder="Text" id="textArea"></textarea>
             <div class="pull-right">
               <a href="board.php" class="btn btn-default">Cancel</a>
-              <input type="submit" class="btn btn-default" id='write' value='Write'/>
+              <input type="submit" class="btn btn-default" class="btn btn-primary" id='write' value='Write'/>
             </div>
           </div>
         </div>

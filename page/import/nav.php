@@ -26,7 +26,7 @@ echo'
           <a href="/page/board/board.php">Board</a>
         </li>
         <li>
-          <a href="#">Recommendations</a>
+          <a href="/page/mail/mail.php">Recommendations</a>
         </li>
         <li>
           <a href="#">???</a>
