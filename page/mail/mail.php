@@ -29,7 +29,7 @@
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
             <label>Title</label>
-            <input class="form-control" placeholder="title" name="title" id="title"/>
+            <input class="form-control" placeholder="title" name="title" id="title" minlength='1'/>
           </div>          
         </div>
 
@@ -50,6 +50,8 @@
         </div>
        
 
+       <!-- 저작권표시바닥글 -->
+    <?php include "../import/footer.php"; ?>
         
         
       </fieldset>
@@ -72,8 +74,6 @@
 
 
       
-       <!-- 저작권표시바닥글 -->
-    <?php include "../import/footer.php"; ?>
 
 
 

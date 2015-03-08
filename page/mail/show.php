@@ -20,7 +20,7 @@
       <thead>
         <tr>
           <th width="7%">글번호</th>
-          <th>Text</th>
+          <th>Title</th>
           <th width="11%">작성자</th>
           <th class="timeDate" width="20%">등록시간</th>
         </tr>
@@ -60,16 +60,16 @@
        
 
          <?php if($data['readcheck']!=1) :?>
-        <tr class="info">
+        <tr class="info" >
           <td align="center"> <span class="label label-danger">New</span></td>
-          <td style='word-break:break-all'><a href="/page/mail/showtext.php?num=<?php echo $data['num']; ?>" > <?php echo $data['title'] ?></a></td>
+          <td style='word-break:break-all' onclick="document.location = '/page/mail/showtext.php?num=<?php echo $data['num']; ?>';"><a> <?php echo $data['title'] ?></a></td>
           <td> <?php echo $data['sender'] ?></td>
           <td> <?php echo $data['senddate'] ?></td>
         </tr>
         <?php else:?>
-        <tr>
+        <tr class="info" >
           <td align="center"> <?php echo $data['num'] ?></td>
-          <td style='word-break:break-all'><a href="/page/mail/showtext.php?num=<?php echo $data['num']; ?>" > <?php echo $data['title'] ?></a></td>
+          <td style='word-break:break-all' onclick="document.location = '/page/mail/showtext.php?num=<?php echo $data['num']; ?>';"><a> <?php echo $data['title'] ?></a></td>
           <td> <?php echo $data['sender'] ?></td>
           <td> <?php echo $data['senddate'] ?></td>
         </tr>

@@ -3,7 +3,7 @@ function go()
 {
  
   
-    window.open('/page/mail/show.php','IDwin','width=1000,height=600');        
+    window.open('/page/mail/show.php','IDwin','scrollbars=yes,width=1000,height=600');        
   
 }
 </script>

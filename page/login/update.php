@@ -63,6 +63,7 @@ function chk_pw(){
         </div>
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
+            <label>Password chenge</label>
             <input type="password" class="form-control"  placeholder="Password" name='new_pw' maxlength="15">
           </div>
         </div>
@@ -74,7 +75,7 @@ function chk_pw(){
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
                   <!-- <button class="btn btn-default">Cancel</button> -->
-            <input type="submit" class="btn btn-primary" id='sub' value='Submit' disabled='true'>
+            <input type="submit" class="btn btn-primary" id='sub' value='Pw Chenge' disabled='true'>
 
           </div>
         </div>
@@ -82,103 +83,44 @@ function chk_pw(){
         <form name="other_form" action="./other_check.php"   method="post" onsubmit="return chk_input()">
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
+            <label>Phone Number</label>
             <input type="text" class="form-control"  placeholder="Phone Number" value='<?php echo $now_phone ; ?>' name='new_pone' maxlength="15">
           </div>
         </div>      
         
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
+            <label>Email</label>
             <input type="text" class="form-control"  placeholder="Email" value='<?php echo $now_email ; ?>' name='new_email'>
           </div>
         </div>
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
+            <label>Name</label>
             <input type="text" class="form-control"  placeholder="Name" value='<?php echo $now_name ; ?>' name='new_name' maxlength="15">
           </div>
         </div>
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
                   <!-- <button class="btn btn-default">Cancel</button> -->
-            <input type="submit" class="btn btn-primary" id='sub' value='Submit' >
+            <input type="submit" class="btn btn-primary" id='sub' value='Other Change' >
 
           </div>
         </div>
+        <!-- 저작권표시바닥글 -->
+    <?php include "../import/footer.php"; ?>
         
       </fieldset>
     </form>
+    
   </div>
 
 
 
-  <!-- 저작권표시바닥글 -->
-    <?php include "../import/footer.php"; ?>
+  
   </div>
 
-  <script src="https://code<div class="container">
-    <fieldset>
-      <div class="col-lg-6 col-lg-offset-3">
-        <legend>Sign Up</legend>
-      </div>
-      <form name="user_form" action="./join_check.php"   method="post" onsubmit="return chk_input()">
-        <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-3">
-            <input type="text" class="form-control" placeholder="ID" id="p_id" name='new_id'   autofocus maxlength="15" >
-          </div>
-          <div class="col-lg-1">
-            
-             <input type="button" class="btn btn-primary" value='ID Check' onclick="chk_id();"/>
-        </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-3">
-            <input type="password" class="form-control"  placeholder="Password" name='new_pw' maxlength="15">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-3">
-            <input type="password" class="form-control"  placeholder="Password Check" name='new_pw_check' onblur='chk_pw();' maxlength="15">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-3">
-            <input type="text" class="form-control"  placeholder="Phone Number" name='new_pone' maxlength="15">
-          </div>
-        </div>      
-        <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-3">
-            <div class="radio">
-              <label>
-                <input type="radio" name="Radios"  value="male" checked="" >
-                male
-              </label>
-              <label>
-                <input type="radio" name="Radios"  value="female" >
-                female
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-3">
-            <input type="text" class="form-control"  placeholder="Email" name='new_email'>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-3">
-            <input type="text" class="form-control"  placeholder="Name" name='new_name' maxlength="15">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-6 col-lg-offset-5">
-            <a href="/index.php" class="btn btn-default">Cancel</a>
-            <!-- <button class="btn btn-default">Cancel</button> -->
-            <input type="submit" class="btn btn-primary" id='sub' value='Submit' disabled='true'/>
-
-          </div>
-        </div>
-      </fieldset>
-    </form>
-  </div>.jquery.com/jquery-1.10.2.min.js"></script>
+  
   <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../../assets/js/bootswatch.js"></script>
 </body>
