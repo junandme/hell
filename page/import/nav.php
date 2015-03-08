@@ -30,7 +30,18 @@ echo'
         </li>
         <li>
           <a href="#">???</a>
-        </li>
+        </li>';
+
+        if($_SESSION['login_id']==='admin'){
+          echo'
+          <li>
+           <a href="/page/mail/show.php">M</a>
+          </li>
+
+          ';
+        }
+
+      echo'  
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

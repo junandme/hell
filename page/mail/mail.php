@@ -21,14 +21,16 @@
        <form name="write" class="member" method="post" action="sendmail.php">
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
-            <label>보내는사람</label>
-            <input class="form-control" type="text" name="title" id="title" placeholder="Email"/>
+            <label>Sender</label>
+            <input class="form-control" type="text" name="id" id="id" value='<?php echo"{$_SESSION['login_id']}";?>' disabled="true"/>
           </div>          
         </div>
 
+      
+
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
-            <label>본문</label>
+            <label>Text</label>
             <textarea class="form-control" rows="15" placeholder="Text" name="article" id="article"></textarea>
           </div>          
         </div>
