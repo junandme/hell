@@ -13,7 +13,9 @@
   <!-- 네비게이션바 -->
   <?php include "../import/nav.php"; ?>
   <?php
-        $sql = "SELECT * FROM send where readcheck=0";
+
+  if($_SESSION['login_id']==='admin'){
+          $sql = "SELECT * FROM send where readcheck=0";
             $result = mysqli_query($conn,$sql);
          
  
@@ -25,6 +27,8 @@
         
            echo "<script>    alert('new message!'); </script>";
         }
+      }
+       
 
 
 
