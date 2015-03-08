@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>join check</title>
+	<title>Send</title>
+	
 </head>
 <body>
 	<?php
@@ -25,9 +26,9 @@
 
 
 
-		$sql = "INSERT INTO send (content,senddate,sender,rec)
+		$sql = "INSERT INTO send (title ,content,senddate,sender,rec,readcheck)
 
-		VALUES ('$article', NOW() ,'{$_SESSION['login_id']}','admin')";
+		VALUES ('$title','$article', NOW() ,'{$_SESSION['login_id']}','admin',0)";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "<meta http-equiv='refresh' content='0;url=/page/main/main.php'>";

@@ -26,6 +26,13 @@
           </div>          
         </div>
 
+        <div class="form-group">
+          <div class="col-lg-6 col-lg-offset-3">
+            <label>Title</label>
+            <input class="form-control" placeholder="title" name="title" id="title"/>
+          </div>          
+        </div>
+
       
 
         <div class="form-group">

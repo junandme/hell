@@ -8,12 +8,29 @@
 </head>
 <body>
 	<?php 
-		session_start();
-
 		echo "<p> 환영합니다.". $_SESSION['login_user']."님</p>";
 	?>
   <!-- 네비게이션바 -->
   <?php include "../import/nav.php"; ?>
+  <?php
+        $sql = "SELECT * FROM send where readcheck=0";
+            $result = mysqli_query($conn,$sql);
+         
+ 
+           
+  
+            $count=mysqli_num_rows($result);
+
+        if($count > 0){      
+        
+           echo "<script>    alert('new message!'); </script>";
+        }
+
+
+
+
+
+  ?>
 
   <!-- 컨텐츠 -->
   <div class="container">

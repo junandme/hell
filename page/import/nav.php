@@ -1,3 +1,13 @@
+<script type="text/javascript">
+function go()
+{
+ 
+  
+    window.open('/page/mail/show.php','IDwin','width=1000,height=600');        
+  
+}
+</script>
+
 <?php
 
 echo'
@@ -35,7 +45,7 @@ echo'
         if($_SESSION['login_id']==='admin'){
           echo'
           <li>
-           <a href="/page/mail/show.php">M</a>
+           <a onclick="go();">M</a>
           </li>
 
           ';
