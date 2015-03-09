@@ -6,6 +6,7 @@
 </head>
 <body>
 	<?php
+		session_start();
 		$servername = "54.64.212.73";
 		$username = "root";
 		$password = "quf254";
@@ -23,9 +24,9 @@
 
 
 
-		$sql1 = "update user set email='$new_email' ";
-		$sql2 = "update user set name='$new_name' ";
-		$sql3 = "update user set pone='$new_pone' ";
+		$sql1 = "update user set email='$new_email' where id='{$_SESSION['login_id']}' ";
+		$sql2 = "update user set name='$new_name' where id='{$_SESSION['login_id']}'";
+		$sql3 = "update user set pone='$new_pone' where id='{$_SESSION['login_id']}'";
 
 
 		if ($conn->query($sql1) === TRUE&&$conn->query($sql2) === TRUE&&$conn->query($sql3) === TRUE) {
