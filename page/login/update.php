@@ -29,7 +29,13 @@
 
 </head>
 <body>
-	<?php
+	
+  
+
+  <!-- 네비게이션바 -->
+  <?php include "../import/nav.php"; ?>
+
+  <?php
   $now_id=$_SESSION['login_id'];
 
   $sql = "SELECT * from user where id='$now_id' ";
@@ -45,10 +51,6 @@
   $now_phone=$row["pone"];
 
   ?>
-  
-
-  <!-- 네비게이션바 -->
-  <?php include "../import/nav.php"; ?>
 
   <div class="container">
     <fieldset>
