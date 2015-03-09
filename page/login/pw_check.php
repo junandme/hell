@@ -23,7 +23,7 @@
 
 
 
-		$sql = "update user set password='$new_pw' ";
+		$sql = "update user set password='$new_pw' where id='{$_SESSION['login_id']}'";
 
 		if ($conn->query($sql) === TRUE) {
 			echo "<meta http-equiv='refresh' content='0;url=../../index.php'>";
