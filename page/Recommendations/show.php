@@ -8,15 +8,9 @@
   
 </head>
 <body>
-  
-
   <!-- 컨텐츠 -->
   <div class="container">
-
-    
-
     <table class="table table-striped table-hover ">
-      
       <thead>
         <tr>
           <th width="7%">글번호</th>
@@ -55,18 +49,17 @@
         
         <?php while($data = $result->fetch_array()):?>
 
-        
         <?php if($data['readcheck']!=1) :?>
         <tr class="info" >
           <td align="center"> <span class="label label-danger">New</span></td>
-          <td style='word-break:break-all' onclick="document.location = '/page/mail/showtext.php?num=<?php echo $data['num']; ?>';"><a href="#"><?php echo $data['title'] ?></a></td>
+          <td style='word-break:break-all' onclick="document.location = '/page/Recommendations/showtext.php?num=<?php echo $data['num']; ?>';"><a href="#"><?php echo $data['title'] ?></a></td>
           <td> <?php echo $data['sender'] ?></td>
           <td> <?php echo $data['senddate'] ?></td>
         </tr>
         <?php else:?>
         <tr class="info" >
           <td align="center"> <?php echo $data['num'] ?></td>
-          <td style='word-break:break-all' onclick="document.location = '/page/mail/showtext.php?num=<?php echo $data['num']; ?>';"><a href="#"><?php echo $data['title'] ?></a></td>
+          <td style='word-break:break-all' onclick="document.location = '/page/Recommendations/showtext.php?num=<?php echo $data['num']; ?>';"><a href="#"><?php echo $data['title'] ?></a></td>
           <td> <?php echo $data['sender'] ?></td>
           <td> <?php echo $data['senddate'] ?></td>
         </tr>
@@ -87,9 +80,7 @@
         <li><a href="#">5</a></li>
         <li><a href="#">»</a></li>
       </ul>
-      
-    
-
+    </div>
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../../assets/js/bootswatch.js"></script>

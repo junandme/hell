@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Info_jun</title>
+  <title>Info_jong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php include "../import/head.php"; ?>
 </head>
