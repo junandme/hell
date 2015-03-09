@@ -6,6 +6,8 @@
 </head>
 <body>
 	<?php
+		
+		session_start();
 		$servername = "54.64.212.73";
 		$username = "root";
 		$password = "quf254";
