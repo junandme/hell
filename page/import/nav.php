@@ -3,7 +3,7 @@ function go()
 {
  
   
-    window.open('/page/mail/show.php','IDwin','scrollbars=yes,width=1000,height=600');        
+    window.open('/page/Recommendations/show.php','IDwin','scrollbars=yes,width=1000,height=600');        
   
 }
 </script>
@@ -36,7 +36,7 @@ echo'
           <a href="/page/board/board.php">Board</a>
         </li>
         <li>
-          <a href="/page/mail/mail.php">Recommendations</a>
+          <a href="/page/Recommendations/Recommendations.php">Recommendations</a>
         </li>
         <li>
           <a href="#">???</a>

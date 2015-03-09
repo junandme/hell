@@ -2,15 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Main</title>
+  <title>My page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php include "../import/head.php"; ?>
 
   <script>
-
-
-
-
   function chk_pw(){
     if(pw_form.new_pw.value != pw_form.new_pw_check.value){
       alert('not match paasword');
@@ -29,8 +25,6 @@
 
 </head>
 <body>
-	
-  
 
   <!-- 네비게이션바 -->
   <?php include "../import/nav.php"; ?>
