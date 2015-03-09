@@ -11,51 +11,51 @@
 
 
 
-function chk_pw(){
-  if(pw_form.new_pw.value != pw_form.new_pw_check.value){
-    alert('not match paasword');
-    pw_form.new_pw.value="";
-    pw_form.new_pw_check.value="";
-    pw_form.new_pw.focus();
-    return false;
+  function chk_pw(){
+    if(pw_form.new_pw.value != pw_form.new_pw_check.value){
+      alert('not match paasword');
+      pw_form.new_pw.value="";
+      pw_form.new_pw_check.value="";
+      pw_form.new_pw.focus();
+      return false;
+    }
+    else{
+      document.getElementById('sub').disabled=false;
+    }
   }
-  else{
-    document.getElementById('sub').disabled=false;
-  }
-}
 
-</script>
+  </script>
 
 
 </head>
 <body>
 	<?php
-    $now_id=$_SESSION['login_id'];
+  $now_id=$_SESSION['login_id'];
 
-	$sql = "SELECT * from user where id='$now_id' ";
- 
-		$result = mysqli_query($conn,$sql);
- 
-		$row = mysqli_fetch_assoc($result);
-	
-		$count=mysqli_num_rows($result);
+  $sql = "SELECT * from user where id='$now_id' ";
 
-		$now_email=$row["email"];
-    $now_name=$row["name"];
-    $now_phone=$row["pone"];
+  $result = mysqli_query($conn,$sql);
 
-	?>
+  $row = mysqli_fetch_assoc($result);
+
+  $count=mysqli_num_rows($result);
+
+  $now_email=$row["email"];
+  $now_name=$row["name"];
+  $now_phone=$row["pone"];
+
+  ?>
   
-	
+
   <!-- 네비게이션바 -->
   <?php include "../import/nav.php"; ?>
 
- <div class="container">
+  <div class="container">
     <fieldset>
-      <div class="col-lg-6 col-lg-offset-3">
-        <legend>Change Information</legend>
+      <div class="jumbotron">
+        <h2>Change Information</h2>
       </div>
-      <form name="pw_form" action="./pw_check.php"   method="post" onsubmit="return chk_input()">
+      <form class="form-horizontal" name="pw_form" action="./pw_check.php"   method="post" onsubmit="return chk_input()">
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
             <input type="text" class="form-control" value='ID : <?php echo $now_id;?>' disabled='true'>
@@ -74,13 +74,12 @@ function chk_pw(){
         </div>
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
-                  <!-- <button class="btn btn-default">Cancel</button> -->
+            <!-- <button class="btn btn-default">Cancel</button> -->
             <input type="submit" class="btn btn-primary" id='sub' value='Pw Chenge' disabled='true'>
-
           </div>
         </div>
-        </form>
-        <form name="other_form" action="./other_check.php"   method="post" onsubmit="return chk_input()">
+      </form>
+      <form class="form-horizontal" name="other_form" action="./other_check.php"   method="post" onsubmit="return chk_input()">
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
             <label>Phone Number</label>
@@ -102,13 +101,13 @@ function chk_pw(){
         </div>
         <div class="form-group">
           <div class="col-lg-6 col-lg-offset-3">
-                  <!-- <button class="btn btn-default">Cancel</button> -->
+            <!-- <button class="btn btn-default">Cancel</button> -->
             <input type="submit" class="btn btn-primary" id='sub' value='Other Change' >
 
           </div>
         </div>
         <!-- 저작권표시바닥글 -->
-    <?php include "../import/footer.php"; ?>
+        <?php include "../import/footer.php"; ?>
         
       </fieldset>
     </form>
@@ -118,10 +117,10 @@ function chk_pw(){
 
 
   
-  </div>
+</div>
 
-  
-  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../../assets/js/bootswatch.js"></script>
+
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/bootswatch.js"></script>
 </body>
 </html>

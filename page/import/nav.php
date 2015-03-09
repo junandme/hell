@@ -42,10 +42,10 @@ echo'
           <a href="#">???</a>
         </li>';
 
-        if($_SESSION['login_id']==='admin'){
+        if($_SESSION['login_id']==='admin' || $_SESSION['login_id']==='a'){
           echo'
           <li>
-           <a onclick="go();">M</a>
+           <a href="#" onclick="go();">M</a>
           </li>
 
           ';

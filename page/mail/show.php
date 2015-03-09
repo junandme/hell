@@ -56,20 +56,17 @@
         <?php while($data = $result->fetch_array()):?>
 
         
-        
-       
-
-         <?php if($data['readcheck']!=1) :?>
+        <?php if($data['readcheck']!=1) :?>
         <tr class="info" >
           <td align="center"> <span class="label label-danger">New</span></td>
-          <td style='word-break:break-all' onclick="document.location = '/page/mail/showtext.php?num=<?php echo $data['num']; ?>';"><a> <?php echo $data['title'] ?></a></td>
+          <td style='word-break:break-all' onclick="document.location = '/page/mail/showtext.php?num=<?php echo $data['num']; ?>';"><a href="#"><?php echo $data['title'] ?></a></td>
           <td> <?php echo $data['sender'] ?></td>
           <td> <?php echo $data['senddate'] ?></td>
         </tr>
         <?php else:?>
         <tr class="info" >
           <td align="center"> <?php echo $data['num'] ?></td>
-          <td style='word-break:break-all' onclick="document.location = '/page/mail/showtext.php?num=<?php echo $data['num']; ?>';"><a> <?php echo $data['title'] ?></a></td>
+          <td style='word-break:break-all' onclick="document.location = '/page/mail/showtext.php?num=<?php echo $data['num']; ?>';"><a href="#"><?php echo $data['title'] ?></a></td>
           <td> <?php echo $data['sender'] ?></td>
           <td> <?php echo $data['senddate'] ?></td>
         </tr>
