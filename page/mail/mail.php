@@ -11,8 +11,7 @@
   <!-- 네비게이션바 -->
   <?php include "../import/nav.php"; ?>
 
-</head>
-<body>
+
   <div class="container">
     <fieldset>
       <div class="jumbotron">
