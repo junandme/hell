@@ -121,34 +121,64 @@
         <?php while($data = $result->fetch_array()):?>
 
         <?php
-        // $nDate = date("Y-m-d");
-        // $aDate = date_format($data['date'], "Y-m-d");
-        // $nCut = explode("-", $nDate);
-        // $aCut = explode("-", $aDate);
-        // $nAdd = "$nCut[0]"."$nCut[1]"."$nCut[2]";
-        // $aAdd = "$aCut[0]"."$aCut[1]"."$aCut[2]";
+        $nDate = date("Y-m-d");
+        $aDate = date($data['date']);
 
-        // if($nAdd == $aAdd) {
-        //   $getDate = date_format($data['date'], "A H:i:s");
-        // } else {
-        //   $getDate = date_format($data['date'], "y-m-d");
-        // }
-
+        $na = date_parse($nDate);
+        $aa = date_parse($aDate);
+        
+        if($na[year]-$aa[year]==0 && $na[month]-$aa[month]==0 && $na[day]-$aa[day]==0) {
+          // $getDate = 'date_format($nDate, "Y-m-d")';
+          $getDate = substr($aDate, 11, 18);
+        } else {
+          // $getDate = 'date_format($nDate, "H:i:s")';
+          $getDate = substr($aDate, 0, 10);
+        }
         ?>
+
         <?php if($data[notice]) :?>
         <tr class="info">
           <td align="center"> <span class="label label-danger">Notice</span></td>
           <td> <?php echo $data['title'] ?></td>
           <td> <?php echo $data['name'] ?></td>
-          <td> <?php echo $data['date'] ?></td>
+          <!-- <td> <?php echo $data['date'] ?></td> -->
+          <td> <?php echo $getDate ?></td>
         </tr>
-        <?php else:?>
+        <?php else:?>        
+        <?php endif?>
+        <?php endwhile ?>
+
+        <?php
+        $sql = "SELECT * from board,user WHERE writer=id and 1 ORDER BY num DESC LIMIT $start_record, $record_to_get";
+        $result = mysqli_query($conn,$sql);
+        ?>
+
+        <?php while($data = $result->fetch_array()):?>
+        <?php
+        $nDate = date("Y-m-d");
+        $aDate = date($data['date']);
+
+        $na = date_parse($nDate);
+        $aa = date_parse($aDate);
+        
+        if($na[year]-$aa[year]==0 && $na[month]-$aa[month]==0 && $na[day]-$aa[day]==0) {
+          // $getDate = 'date_format($nDate, "Y-m-d")';
+          $getDate = substr($aDate, 11, 18);
+        } else {
+          // $getDate = 'date_format($nDate, "H:i:s")';
+          $getDate = substr($aDate, 0, 10);
+        }
+        ?>
+
+        <?php if(!$data[notice]) :?>
         <tr>
           <td align="center"> <?php echo $data['num'] ?></td>
           <td> <?php echo $data['title'] ?></td>
           <td> <?php echo $data['name'] ?></td>
-          <td> <?php echo $data['date'] ?></td>
+          <!-- <td> <?php echo $data['date'] ?></td> -->
+          <td> <?php echo $getDate ?></td>
         </tr>
+        <?php else:?>        
         <?php endif?>
         <?php endwhile ?>
         
