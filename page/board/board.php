@@ -31,7 +31,7 @@
           <th width="7%">글번호</th>
           <th>글제목</th>
           <th width="11%">작성자</th>
-          <th class="timeDate" width="17%">등록시간</th>
+          <th class="timeDate" width="15%">등록시간</th>
         </tr>
       </thead>
       <!-- <tbody>
@@ -120,6 +120,7 @@
         $result = mysqli_query($conn,$sql);
         ?>
         
+        <!-- 공지사항 -->
         <?php while($data = $result->fetch_array()):?>
 
         <?php
@@ -129,22 +130,24 @@
         $na = date_parse($nDate);
         $aa = date_parse($aDate);
         
-        if($na[year]-$aa[year]==0 && $na[month]-$aa[month]==0 && $na[day]-$aa[day]==0) {
-          // $getDate = 'date_format($nDate, "Y-m-d")';
-          $getDate = substr($aDate, 11, 18);
-        } else {
-          // $getDate = 'date_format($nDate, "H:i:s")';
-          $getDate = substr($aDate, 0, 10);
-        }
+        // if($na[year]-$aa[year]==0 && $na[month]-$aa[month]==0 && $na[day]-$aa[day]==0) {
+        //   $getDate = substr($aDate, 11, 18);
+        // } else {
+        //   $getDate = substr($aDate, 2, 8);
+        // }
         ?>
 
         <?php if($data[notice]) :?>
         <tr class="info">
           <td align="center"> <span class="label label-danger">Notice</span></td>
-          <td> <?php echo $data['title'] ?></td>
+          <td onclick="document.location = '/page/board/view.php?num=<?php echo $data['num']; ?>';"><a class="boardA" href="#"><?php echo $data['title'] ?></a></td>
           <td> <?php echo $data['name'] ?></td>
           <!-- <td> <?php echo $data['date'] ?></td> -->
-          <td> <?php echo $getDate ?></td>
+          <?php if($na[year]-$aa[year]==0 && $na[month]-$aa[month]==0 && $na[day]-$aa[day]==0) :?>
+            <td style="color:red;"> <?php echo substr($aDate, 11, 18); ?></td>
+          <?php else: ?>
+            <td> <?php echo substr($aDate, 2, 8); ?></td>
+          <?php endif?>
         </tr>
         <?php $num_notice = $num_notice + 1; ?>
         <?php else:?>        
@@ -153,6 +156,7 @@
 
         <?php $paging_num = $paging_num - $num_notice; ?>
 
+        <!-- 일반 게시글 -->
         <?php
         $sql = "SELECT * from board,user WHERE writer=id and 1 ORDER BY num DESC LIMIT $start_record, $record_to_get";
         $result = mysqli_query($conn,$sql);
@@ -166,23 +170,20 @@
         $na = date_parse($nDate);
         $aa = date_parse($aDate);
         
-        if($na[year]-$aa[year]==0 && $na[month]-$aa[month]==0 && $na[day]-$aa[day]==0) {
-          // $getDate = 'date_format($nDate, "Y-m-d")';
-          $getDate = substr($aDate, 11, 18);
-        } else {
-          // $getDate = 'date_format($nDate, "H:i:s")';
-          $getDate = substr($aDate, 0, 10);
-        }
         ?>
-
+        
         <?php if(!$data[notice]) :?>
         <tr>
           <!-- <td align="center"> <?php echo $data['num'] ?></td> -->
           <td align="center"> <?php echo $paging_num ?></td>
-          <td> <?php echo $data['title'] ?></td>
+          <td onclick="document.location = '/page/board/view.php?num=<?php echo $data['num']; ?>';"><a class="boardA" href="#"><?php echo $data['title'] ?></a></td>
           <td> <?php echo $data['name'] ?></td>
           <!-- <td> <?php echo $data['date'] ?></td> -->
-          <td> <?php echo $getDate ?></td>
+          <?php if($na[year]-$aa[year]==0 && $na[month]-$aa[month]==0 && $na[day]-$aa[day]==0) :?>
+            <td style="color:red;"> <?php echo substr($aDate, 11, 18); ?></td>
+          <?php else: ?>
+            <td> <?php echo substr($aDate, 2, 8); ?></td>
+          <?php endif?>
         </tr>
         <?php $paging_num = $paging_num - 1; ?>
         <?php else:?>        
