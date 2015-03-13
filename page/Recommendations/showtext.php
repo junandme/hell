@@ -20,40 +20,23 @@
         </tr>
       </thead>
       <tbody>
-        <?php
-        $sql = "SELECT * FROM send ";
-        $result = mysqli_query($conn,$sql);
-        $rows = mysqli_num_rows($result);
-        $total_record = $rows;
         
-        $record_per_page = 20;
-
-        if( isset($page) ) {
-          $now_page = $page;
-        } else {
-          $now_page = 1;
-        }
-        ?>
-
-        <?php if($total_record==0) :?>글이 존재하지 않습니다.<?php else:?><?php endif?>
 
         <?php
 
         extract($_GET);
 
-        $start_record = $record_per_page*($now_page-1);
-        $record_to_get = $record_per_page;
-        if( $start_record+$record_to_get > $total_record) {
-          $record_to_get = $total_record - $start_record;
-        }
-        $sql = "SELECT * from send WHERE num={$num} and 1 ORDER BY num DESC LIMIT $start_record, $record_to_get";
+        
+        $sql = "SELECT * from send WHERE num={$num} ";
         $read = "update send set readcheck=1 where num={$num}";
         if ($conn->query($read) === TRUE) {
         }else{
           echo" error ";
         }        
         $result = mysqli_query($conn,$sql);
+        $rows = mysqli_num_rows($result);
         ?>
+        <?php if($rows==0) :?>글이 존재하지 않습니다.<?php else:?><?php endif?>
         
         <?php while($data = $result->fetch_array()):?>
 
