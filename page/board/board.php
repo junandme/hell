@@ -31,7 +31,7 @@
           <th width="7%">글번호</th>
           <th>글제목</th>
           <th width="11%">작성자</th>
-          <th class="timeDate" width="16%">등록시간</th>
+          <th class="timeDate" width="18%">등록시간</th>
         </tr>
       </thead>
       <!-- <tbody>
