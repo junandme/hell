@@ -31,7 +31,7 @@
           <th width="7%">글번호</th>
           <th>글제목</th>
           <th width="11%">작성자</th>
-          <th class="timeDate" width="15%">등록시간</th>
+          <th class="timeDate" width="17%">등록시간</th>
         </tr>
       </thead>
       <!-- <tbody>
@@ -96,8 +96,10 @@
         $result = mysqli_query($conn,$sql);
         $rows = mysqli_num_rows($result);
         $total_record = $rows;
-        
-        $record_per_page = 20;
+        $paging_num = $rows;
+        $num_notice = 0;
+
+        $record_per_page = 30;
 
         if( isset($page) ) {
           $now_page = $page;
@@ -144,9 +146,12 @@
           <!-- <td> <?php echo $data['date'] ?></td> -->
           <td> <?php echo $getDate ?></td>
         </tr>
+        <?php $num_notice = $num_notice + 1; ?>
         <?php else:?>        
         <?php endif?>
         <?php endwhile ?>
+
+        <?php $paging_num = $paging_num - $num_notice; ?>
 
         <?php
         $sql = "SELECT * from board,user WHERE writer=id and 1 ORDER BY num DESC LIMIT $start_record, $record_to_get";
@@ -172,12 +177,14 @@
 
         <?php if(!$data[notice]) :?>
         <tr>
-          <td align="center"> <?php echo $data['num'] ?></td>
+          <!-- <td align="center"> <?php echo $data['num'] ?></td> -->
+          <td align="center"> <?php echo $paging_num ?></td>
           <td> <?php echo $data['title'] ?></td>
           <td> <?php echo $data['name'] ?></td>
           <!-- <td> <?php echo $data['date'] ?></td> -->
           <td> <?php echo $getDate ?></td>
         </tr>
+        <?php $paging_num = $paging_num - 1; ?>
         <?php else:?>        
         <?php endif?>
         <?php endwhile ?>
