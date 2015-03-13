@@ -14,20 +14,17 @@
   <?php include "../import/nav.php"; ?>
   <?php
 
-  if($_SESSION['login_id']==='admin'){
-          $sql = "SELECT * FROM send where readcheck=0";
-            $result = mysqli_query($conn,$sql);
-         
- 
-           
   
+          $sql = "SELECT * FROM send where rec='{$_SESSION['login_id']}' and readcheck=0";
+            $result = mysqli_query($conn,$sql);
             $count=mysqli_num_rows($result);
 
         if($count > 0){      
         
            echo "<script>    alert('new message!'); </script>";
         }
-      }
+      
+      
        
 
 

@@ -6,6 +6,13 @@ function go()
     window.open('/page/Recommendations/show.php','IDwin','scrollbars=yes,width=1000,height=600');        
   
 }
+function gogo()
+{
+ 
+  
+    window.open('/page/message/show.php','IDwin','scrollbars=yes,width=1000,height=600');        
+  
+}
 </script>
 
 <?php
@@ -46,6 +53,14 @@ echo'
           echo'
           <li>
            <a href="#" onclick="go();">M</a>
+          </li>
+
+          ';
+        }
+        else{
+          echo'
+          <li>
+           <a href="#" onclick="gogo();">Msg</a>
           </li>
 
           ';
