@@ -31,65 +31,9 @@
           <th width="7%">글번호</th>
           <th>글제목</th>
           <th width="11%">작성자</th>
-          <th class="timeDate" width="18%">등록시간</th>
+          <th class="timeDate" width="15%">등록시간</th>
         </tr>
       </thead>
-      <!-- <tbody>
-        <tr class="info">
-          <td><span class="label label-danger">Notice</span></td>
-          <td>공지사항</td>
-          <td>박준혁</td>
-          <td>2015-02-19 21:27</td>
-        </tr>
-        <tr class="info">
-          <td><span class="label label-danger">Notice</span></td>
-          <td>공지사항</td>
-          <td>박준혁</td>
-          <td>2015-02-19 21:27</td>
-        </tr>
-        <tr class="info">
-          <td><span class="label label-danger">Notice</span></td>
-          <td>공지사항</td>
-          <td>박준혁</td>
-          <td>2015-02-19 21:27</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>DB에서 가져올 글들</td>
-          <td>정종선</td>
-          <td>2015-02-22 10:20</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>DB에서 가져올 글들</td>
-          <td>정종선</td>
-          <td>2015-02-22 10:20</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>DB에서 가져올 글들</td>
-          <td>정종선</td>
-          <td>2015-02-22 10:20</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>DB에서 가져올 글들</td>
-          <td>정종선</td>
-          <td>2015-02-22 10:20</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>DB에서 가져올 글들</td>
-          <td>정종선</td>
-          <td>2015-02-22 10:20</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>DB에서 가져올 글들</td>
-          <td>정종선</td>
-          <td>2015-02-22 10:20</td>
-        </tr>
-      </tbody> -->
       <tbody>
         <?php
         $sql = "SELECT * FROM board";
