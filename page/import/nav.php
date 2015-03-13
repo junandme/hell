@@ -54,6 +54,9 @@ echo'
           <li>
            <a href="#" onclick="go();">M</a>
           </li>
+          <li>
+           <a href="#" onclick="gogo();">Msg</a>
+          </li>
 
           ';
         }
